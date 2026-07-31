@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSP Tech Health Check</title>
+    <!-- Tailwind CSS CDN Link: Enables instant styling without installation -->
+    <script src="https://tailwindcss.com"></script>
+    <script>
+        // Custom Tailwind configuration if you want to tweak colors easily
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0284c7', // Primary tech blue
+                            dark: '#0f172a', // Deep slate background
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+
+    <!-- Simple Navigation Bar Bar -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+            <span class="font-bold text-xl tracking-tight text-brand-dark flex items-center gap-2">
+                🛡️ <span class="text-brand-blue">Core</span>IT Support
+            </span>
+            <span class="text-xs font-semibold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                Proof of Concept
+            </span>
+        </div>
+    </nav>
+
+    <!-- Hero Section with the Hook -->
+    <header class="bg-gradient-to-b from-brand-dark to-slate-900 text-white py-16 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-tight mb-4">
+                Is your business data <span class="text-brand-blue">actually safe</span> from hackers?
+            </h1>
+            <p class="text-slate-400 text-base md:text-lg max-w-xl mx-auto mb-8">
+                Most small businesses don't discover their IT vulnerabilities until it's too late. Take our 2-minute self-assessment to find out where you stand.
+            </p>
+            <a href="#quiz-section" class="inline-block bg-brand-blue hover:bg-sky-500 text-white font-bold px-8 py-3.5 rounded-lg shadow-lg hover:shadow-sky-500/20 transition duration-150 transform hover:-translate-y-0.5">
+                Start the 2-Minute Test &rarr;
+            </a>
+        </div>
+    </header>
+
+    <!-- Interactive Component Target Area -->
+    <main id="quiz-section" class="max-w-2xl mx-auto px-4 py-16">
+        <!-- AI Component Target Div: This is where you will inject your AI-generated quiz and form code -->
+        <div id="quiz-container" class="bg-white rounded-2xl shadow-xl border border-slate-100 p-8 min-h-[350px] flex flex-col justify-center items-center text-center">
+            
+            <!-- Placeholder State -->
+            <div id="placeholder-content" class="space-y-4">
+                <div class="w-12 h-12 bg-sky-50 text-brand-blue rounded-full flex items-center justify-center mx-auto text-xl font-bold animate-pulse">
+                    ?
+                </div>
+                <h3 class="text-xl font-bold text-slate-800">Quiz Component Target</h3>
+                <p class="text-sm text-slate-500 max-w-sm mx-auto">
+                    Replace this inner div with the AI-generated interactive quiz and lead-capture JavaScript logic.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Simple Trust Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-400">
+        <div class="max-w-5xl mx-auto px-4">
+            <p>&copy; 2026 CoreIT Managed Services. All rights reserved.</p>
+            <p class="mt-1">Demonstrating instant value through automated IT risk scoring.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
