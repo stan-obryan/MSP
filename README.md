@@ -2,7 +2,7 @@ Project Name:
 MSP-Landing-Page-Quiz-
 
 Live Demo:
-https://stan-obryan.github.io/MSP-Landing-Page-Quiz-/
+[View my project here]https://stan-obryan.github.io/MSP-Landing-Page-Quiz-/
 
 Problem:
 Many small businesses heavily rely on computers and other technology to conduct business every day. Hiring someone fulltime is very costly for small businesses so Managed Service Providers allow small businesses and teams to get enterprise level IT services for a fraction of the cost.
@@ -30,6 +30,7 @@ HTML, CSS, and JS
 AI Tools Used:
 Google search AI
 Riplet
+DevConsole AI Assistance
 
 Running the Project:
 How can someone run your application?
