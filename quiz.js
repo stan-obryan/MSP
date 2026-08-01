@@ -54,13 +54,12 @@
   ];
 
   var TAILWIND = {
-    shell: "mx-auto w-full max-w-3xl overflow-hidden rounded-2xl border border-slate-200 bg-white text-slate-900 shadow-xl shadow-slate-200/60",
-    content: "p-6 sm:p-10",
+    shell: "bg-white rounded-2xl shadow-xl border border-slate-100 p-8 max-w-xl mx-auto",
     eyebrow: "mb-3 text-xs font-bold uppercase tracking-[0.18em] text-sky-600",
-    title: "text-2xl font-bold tracking-tight text-brand-dark sm:text-3xl",
+    question: "text-xl font-bold text-slate-800 tracking-tight mb-6",
     muted: "text-sm leading-6 text-slate-500",
     button: "inline-flex items-center justify-center rounded-xl bg-sky-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-sky-600/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-sky-700 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-sky-600/20 disabled:cursor-not-allowed disabled:opacity-50",
-    field: "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-sky-600 focus:ring-4 focus:ring-sky-600/10"
+    field: "w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all"
   };
 
   function element(tagName, className, text) {
@@ -108,7 +107,7 @@
     if (score <= 15) {
       return {
         label: "LOW RISK",
-        tone: "green",
+        tone: "low",
         icon: "shield",
         title: "Your setup is in good shape.",
         description: "You have strong foundational protections in place. Keep reviewing your controls as your business grows.",
@@ -119,7 +118,7 @@
     if (score <= 35) {
       return {
         label: "MEDIUM RISK",
-        tone: "yellow",
+        tone: "medium",
         icon: "warning",
         title: "There are a few gaps to close.",
         description: "Your business has some protections in place, but a few weak spots could create avoidable downtime or exposure.",
@@ -134,7 +133,7 @@
 
     return {
       label: "HIGH RISK",
-      tone: "red",
+      tone: "high",
       icon: "critical",
       title: "Your business faces an urgent security risk.",
       description: "A preventable incident could cause serious data loss, downtime, or disruption. Prioritize a security evaluation as soon as possible.",
@@ -162,7 +161,7 @@
 
     function renderFrame() {
       container.replaceChildren();
-      var frame = element("section", TAILWIND.shell + " " + TAILWIND.content);
+      var frame = element("section", TAILWIND.shell);
       container.appendChild(frame);
       return frame;
     }
@@ -173,8 +172,8 @@
       header.appendChild(element("p", "text-xs font-semibold text-slate-500", "Question " + (currentQuestion + 1) + " of 6"));
       frame.appendChild(header);
 
-      var track = element("div", "mb-10 h-2 overflow-hidden rounded-full bg-slate-100");
-      var value = element("div", "h-full rounded-full bg-sky-600 transition-all duration-500");
+      var track = element("div", "w-full bg-slate-100 rounded-full h-2 mb-6");
+      var value = element("div", "bg-sky-600 h-2 rounded-full transition-all duration-300");
       value.style.width = ((currentQuestion + 1) / QUESTIONS.length) * 100 + "%";
       track.appendChild(value);
       frame.appendChild(track);
@@ -183,14 +182,14 @@
     function renderQuestion() {
       var frame = renderFrame();
       renderProgress(frame);
-      frame.appendChild(element("h2", TAILWIND.title + " mb-8 max-w-2xl", QUESTIONS[currentQuestion].prompt));
+      frame.appendChild(element("h2", TAILWIND.question, QUESTIONS[currentQuestion].prompt));
 
       var answers = element("div", "grid gap-3");
       QUESTIONS[currentQuestion].answers.forEach(function (answer, answerIndex) {
-        var button = element("button", "group flex w-full items-start gap-4 rounded-xl border border-slate-200 bg-slate-50 p-4 text-left text-sm leading-6 text-slate-700 transition-all duration-200 hover:-translate-y-0.5 hover:border-sky-400 hover:bg-sky-50 hover:shadow-md focus:outline-none focus:ring-4 focus:ring-sky-600/10");
+        var button = element("button", "w-full text-left p-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 hover:border-sky-500 transition-all text-base font-medium flex items-center gap-3 mb-3 shadow-sm");
         button.type = "button";
-        button.appendChild(element("span", "flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-slate-300 bg-white text-xs font-bold text-slate-500 transition-all group-hover:border-sky-600 group-hover:bg-sky-600 group-hover:text-white", String.fromCharCode(65 + answerIndex)));
-        button.appendChild(element("span", "pt-0.5", answer.text));
+        button.appendChild(element("span", "flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-xs font-bold text-slate-600", String.fromCharCode(65 + answerIndex)));
+        button.appendChild(element("span", "", answer.text));
         button.addEventListener("click", function () {
           score += answer.points;
           currentQuestion += 1;
@@ -213,7 +212,7 @@
     function renderLeadGate() {
       var frame = renderFrame();
       frame.appendChild(element("p", TAILWIND.eyebrow, "One last step"));
-      frame.appendChild(element("h2", TAILWIND.title + " mb-3", "Calculating your Risk Score..."));
+      frame.appendChild(element("h2", "text-2xl font-bold text-slate-800 tracking-tight mb-3", "Calculating your Risk Score..."));
       frame.appendChild(element("p", TAILWIND.muted + " mb-8 max-w-xl", "Enter your business email to unlock your customized IT security scorecard and risk breakdown."));
 
       var form = element("form", "grid gap-5");
@@ -260,11 +259,29 @@
       isSubmitting = false;
       var risk = getRisk(score);
       var frame = renderFrame();
-      var tone = risk.tone === "green"
-        ? { icon: "bg-green-100 text-green-700", border: "border-green-200", label: "text-green-700" }
-        : risk.tone === "yellow"
-          ? { icon: "bg-yellow-100 text-yellow-700", border: "border-yellow-200", label: "text-yellow-700" }
-          : { icon: "bg-red-100 text-red-700", border: "border-red-200", label: "text-red-700" };
+      var tone = risk.tone === "low"
+        ? {
+            icon: "bg-emerald-100 text-emerald-700",
+            border: "border-emerald-200",
+            summary: "bg-emerald-50",
+            label: "text-emerald-700",
+            cta: "bg-emerald-600 hover:bg-emerald-700 focus:ring-emerald-500/30 shadow-emerald-600/20"
+          }
+        : risk.tone === "medium"
+          ? {
+              icon: "bg-amber-100 text-amber-700",
+              border: "border-amber-200",
+              summary: "bg-amber-50",
+              label: "text-amber-700",
+              cta: "bg-amber-600 hover:bg-amber-700 focus:ring-amber-500/30 shadow-amber-600/20"
+            }
+          : {
+              icon: "bg-rose-100 text-rose-700",
+              border: "border-rose-200",
+              summary: "bg-rose-50",
+              label: "text-rose-700",
+              cta: "bg-rose-600 hover:bg-rose-700 focus:ring-rose-500/30 shadow-rose-600/20"
+            };
 
       var top = element("div", "mb-8 flex flex-col gap-6 border-b border-slate-100 pb-8 sm:flex-row sm:items-center sm:justify-between");
       var badge = element("div", "flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl " + tone.icon);
@@ -273,7 +290,7 @@
 
       var heading = element("div", "sm:flex-1");
       heading.appendChild(element("p", TAILWIND.eyebrow + " mb-2", "Your personalized scorecard"));
-      heading.appendChild(element("h2", TAILWIND.title, risk.label));
+      heading.appendChild(element("h2", "text-2xl font-bold tracking-tight " + tone.label, risk.label));
       top.appendChild(heading);
 
       var scoreBox = element("div", "rounded-xl bg-slate-50 px-5 py-4 text-center");
@@ -282,7 +299,7 @@
       top.appendChild(scoreBox);
       frame.appendChild(top);
 
-      var summary = element("div", "mb-8 rounded-2xl border " + tone.border + " bg-white p-6");
+      var summary = element("div", "mb-8 rounded-2xl border " + tone.border + " " + tone.summary + " p-6");
       summary.appendChild(element("h3", "mb-2 text-xl font-bold text-brand-dark", risk.title));
       summary.appendChild(element("p", TAILWIND.muted, risk.description));
       frame.appendChild(summary);
@@ -302,7 +319,7 @@
       }
 
       var actions = element("div", "flex flex-col gap-3 sm:flex-row sm:items-center");
-      var cta = element("button", TAILWIND.button, risk.cta);
+      var cta = element("button", "inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-bold text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-4 " + tone.cta, risk.cta);
       cta.type = "button";
       cta.addEventListener("click", function () {
         if (typeof window.onSecurityQuizCta === "function") {
