@@ -1,0 +1,283 @@
+Microsoft Windows [Version 10.0.26100.2894]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Windows\System32>npm init -y
+Wrote to C:\Windows\System32\package.json:
+
+{
+  "name": "system32",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
+
+
+
+C:\Windows\System32>npm install -D tailwindcss
+
+added 1 package, and audited 2 packages in 3s
+
+found 0 vulnerabilities
+
+C:\Windows\System32>npx tailwindcss init
+npm error could not determine executable to run
+npm error A complete log of this run can be found in: C:\Users\User\AppData\Local\npm-cache\_logs\2026-08-01T01_29_25_340Z-debug-0.log
+
+C:\Windows\System32>npx
+
+Entering npm script environment at location:
+C:\Windows\System32
+Type 'exit' or ^D when finished
+
+Microsoft Windows [Version 10.0.26100.2894]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Windows\System32>npm install -D tailwindcss postcss autoprefixer
+
+added 14 packages, and audited 16 packages in 6s
+
+7 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Windows\System32>npx tailwindcss init
+npm error could not determine executable to run
+npm error A complete log of this run can be found in: C:\Users\User\AppData\Local\npm-cache\_logs\2026-08-01T01_42_05_014Z-debug-0.log
+
+C:\Windows\System32>cd C:\Users\User\Documents\GitHub\MSP
+
+C:\Users\User\Documents\GitHub\MSP>cd C:\Users\User\Documents\GitHub\MSP
+
+C:\Users\User\Documents\GitHub\MSP>npm init -y
+Wrote to C:\Users\User\Documents\GitHub\MSP\package.json:
+
+{
+  "name": "msp",
+  "version": "1.0.0",
+  "description": "MSP Website",
+  "main": "quiz.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stan-obryan/MSP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/stan-obryan/MSP/issues"
+  },
+  "homepage": "https://github.com/stan-obryan/MSP#readme"
+}
+
+
+
+C:\Users\User\Documents\GitHub\MSP>npm install -D tailwindcss postcss autoprefixer
+
+added 15 packages, and audited 16 packages in 1s
+
+7 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\User\Documents\GitHub\MSP>npx tailwindcss init
+npm error could not determine executable to run
+npm error A complete log of this run can be found in: C:\Users\User\AppData\Local\npm-cache\_logs\2026-08-01T01_46_21_565Z-debug-0.log
+
+C:\Users\User\Documents\GitHub\MSP>del package-lock.json
+
+C:\Users\User\Documents\GitHub\MSP>npm install tailwindcss @tailwindcss/cli
+
+added 30 packages, and audited 46 packages in 10s
+
+13 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm warn allow-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn allow-scripts   @parcel/watcher@2.5.1 (install: node scripts/build-from-source.js)
+npm warn allow-scripts
+npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+
+C:\Users\User\Documents\GitHub\MSP>npm install -D tailwindcss@3 postcss autoprefixer
+
+added 57 packages, changed 1 package, and audited 103 packages in 5s
+
+28 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm warn allow-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn allow-scripts   @parcel/watcher@2.5.1 (install: node-gyp rebuild)
+npm warn allow-scripts
+npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+
+C:\Users\User\Documents\GitHub\MSP>npx tailwindcss init
+
+Created Tailwind CSS config file: tailwind.config.js
+
+C:\Users\User\Documents\GitHub\MSP>npx tailwindcss -i ./input.css -o ./dist/output.css --minify
+Specified input file ./input.css does not exist.
+
+C:\Users\User\Documents\GitHub\MSP>npx tailwindcss -i ./input.css -o ./dist/output.css --minify
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+CssSyntaxError: C:\Users\User\Documents\GitHub\MSP\input.css:1:1: Unknown word css
+    at Input.error (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\input.js:135:16)
+    at Parser.unknownWord (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\parser.js:602:22)
+    at Parser.other (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\parser.js:444:12)
+    at Parser.parse (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\parser.js:479:16)
+    at parse (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\parse.js:11:12)
+    at new LazyResult (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\lazy-result.js:171:16)
+    at Processor.process (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\processor.js:53:14)
+    at C:\Users\User\Documents\GitHub\MSP\node_modules\tailwindcss\lib\cli\build\plugin.js:290:50
+    at async build (C:\Users\User\Documents\GitHub\MSP\node_modules\tailwindcss\lib\cli\build\index.js:49:9) {
+  reason: 'Unknown word css',
+  file: 'C:\\Users\\User\\Documents\\GitHub\\MSP\\input.css',
+  source: 'css@tailwind base;\r\n@tailwind components;\r\n@tailwind utilities;',
+  line: 1,
+  column: 1,
+  endLine: 1,
+  endColumn: 4,
+  input: {
+    column: 1,
+    endColumn: 4,
+    endLine: 1,
+    endOffset: 3,
+    line: 1,
+    offset: 0,
+    source: 'css@tailwind base;\r\n@tailwind components;\r\n@tailwind utilities;',
+    url: 'file:///C:/Users/User/Documents/GitHub/MSP/input.css',
+    file: 'C:\\Users\\User\\Documents\\GitHub\\MSP\\input.css'
+  }
+}
+
+C:\Users\User\Documents\GitHub\MSP>npx update-browserslist-db@latest
+Latest version:     1.0.30001806
+Installed version:  1.0.30001806
+caniuse-lite is up to date
+caniuse-lite has been successfully updated
+
+No target browser changes
+
+C:\Users\User\Documents\GitHub\MSP>npx tailwindcss -i ./input.css -o ./dist/output.css --minify
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+CssSyntaxError: C:\Users\User\Documents\GitHub\MSP\input.css:1:1: Unknown word css
+    at Input.error (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\input.js:135:16)
+    at Parser.unknownWord (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\parser.js:602:22)
+    at Parser.other (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\parser.js:444:12)
+    at Parser.parse (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\parser.js:479:16)
+    at parse (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\parse.js:11:12)
+    at new LazyResult (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\lazy-result.js:171:16)
+    at Processor.process (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\processor.js:53:14)
+    at C:\Users\User\Documents\GitHub\MSP\node_modules\tailwindcss\lib\cli\build\plugin.js:290:50
+    at async build (C:\Users\User\Documents\GitHub\MSP\node_modules\tailwindcss\lib\cli\build\index.js:49:9) {
+  reason: 'Unknown word css',
+  file: 'C:\\Users\\User\\Documents\\GitHub\\MSP\\input.css',
+  source: 'css@tailwind base;\r\n@tailwind components;\r\n@tailwind utilities;',
+  line: 1,
+  column: 1,
+  endLine: 1,
+  endColumn: 4,
+  input: {
+    column: 1,
+    endColumn: 4,
+    endLine: 1,
+    endOffset: 3,
+    line: 1,
+    offset: 0,
+    source: 'css@tailwind base;\r\n@tailwind components;\r\n@tailwind utilities;',
+    url: 'file:///C:/Users/User/Documents/GitHub/MSP/input.css',
+    file: 'C:\\Users\\User\\Documents\\GitHub\\MSP\\input.css'
+  }
+}
+
+C:\Users\User\Documents\GitHub\MSP>npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+Specified input file ./src/input.css does not exist.
+
+C:\Users\User\Documents\GitHub\MSP>npm run build
+npm error Missing script: "build"
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: C:\Users\User\AppData\Local\npm-cache\_logs\2026-08-01T02_12_09_049Z-debug-0.log
+
+C:\Users\User\Documents\GitHub\MSP>npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+Specified input file ./src/input.css does not exist.
+
+C:\Users\User\Documents\GitHub\MSP>npx tailwindcss -i ./input.css -o ./dist/output.css --minify
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+CssSyntaxError: C:\Users\User\Documents\GitHub\MSP\input.css:1:1: Unknown word css
+    at Input.error (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\input.js:135:16)
+    at Parser.unknownWord (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\parser.js:602:22)
+    at Parser.other (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\parser.js:444:12)
+    at Parser.parse (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\parser.js:479:16)
+    at parse (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\parse.js:11:12)
+    at new LazyResult (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\lazy-result.js:171:16)
+    at Processor.process (C:\Users\User\Documents\GitHub\MSP\node_modules\postcss\lib\processor.js:53:14)
+    at C:\Users\User\Documents\GitHub\MSP\node_modules\tailwindcss\lib\cli\build\plugin.js:290:50
+    at async build (C:\Users\User\Documents\GitHub\MSP\node_modules\tailwindcss\lib\cli\build\index.js:49:9) {
+  reason: 'Unknown word css',
+  file: 'C:\\Users\\User\\Documents\\GitHub\\MSP\\input.css',
+  source: 'css@tailwind base;\r\n@tailwind components;\r\n@tailwind utilities;',
+  line: 1,
+  column: 1,
+  endLine: 1,
+  endColumn: 4,
+  input: {
+    column: 1,
+    endColumn: 4,
+    endLine: 1,
+    endOffset: 3,
+    line: 1,
+    offset: 0,
+    source: 'css@tailwind base;\r\n@tailwind components;\r\n@tailwind utilities;',
+    url: 'file:///C:/Users/User/Documents/GitHub/MSP/input.css',
+    file: 'C:\\Users\\User\\Documents\\GitHub\\MSP\\input.css'
+  }
+}
+
+C:\Users\User\Documents\GitHub\MSP>npx tailwindcss -i ./input.css -o ./dist/output.css --minify
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+Rebuilding...
+
+Done in 206ms.
+
+C:\Users\User\Documents\GitHub\MSP>npx update-browserslist-db@latest
+Latest version:     1.0.30001806
+Installed version:  1.0.30001806
+caniuse-lite is up to date
+caniuse-lite has been successfully updated
+
+No target browser changes
+
+C:\Users\User\Documents\GitHub\MSP>npx tailwindcss -i ./input.css -o ./dist/output.css --minify
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+Rebuilding...
+
+Done in 207ms.
+
+C:\Users\User\Documents\GitHub\MSP>
