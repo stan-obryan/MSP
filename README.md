@@ -1,5 +1,5 @@
 Project Name:
-MSP-Landing-Page-Quiz-
+MSP-Landing-Page-Quiz
 
 Live Demo:
 [View my project here]https://stan-obryan.github.io/MSP-Landing-Page-Quiz-/
