@@ -52,23 +52,10 @@
     </header>
 
     <!-- Interactive Component Target Area -->
-    <main id="quiz-section" class="max-w-2xl mx-auto px-4 py-16">
-        <!-- AI Component Target Div: This is where you will inject your AI-generated quiz and form code -->
-        <div id="quiz-container" class="bg-white rounded-2xl shadow-xl border border-slate-100 p-8 min-h-[350px] flex flex-col justify-center items-center text-center">
-            
-            <!-- Placeholder State -->
-            <div id="placeholder-content" class="space-y-4">
-                <div class="w-12 h-12 bg-sky-50 text-brand-blue rounded-full flex items-center justify-center mx-auto text-xl font-bold animate-pulse">
-                    ?
-                </div>
-                <h3 class="text-xl font-bold text-slate-800">Quiz Component Target</h3>
-                <p class="text-sm text-slate-500 max-w-sm mx-auto">
-                    Replace this inner div with the AI-generated interactive quiz and lead-capture JavaScript logic.
-                </p>
-            </div>
-
-        </div>
-    </main>
+		<main id="quiz-section" class="max-w-2xl mx-auto px-4 py-16">
+			<!-- Clean container ready for the external script -->
+			<div id="quiz-container"></div>
+		</main>
 
     <!-- Simple Trust Footer -->
     <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-400">
@@ -77,6 +64,7 @@
             <p class="mt-1">Demonstrating instant value through automated IT risk scoring.</p>
         </div>
     </footer>
-
+		<!-- Link to your separate quiz logic file -->
+		<script src="quiz.js"></script>
 </body>
 </html>
